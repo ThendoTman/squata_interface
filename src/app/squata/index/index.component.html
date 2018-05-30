@@ -1,0 +1,71 @@
+<!-- City List -->
+<div class="col-md-12 col-sm-12 col-xs-12 properties-section">
+  <div class="divider-medium"></div>
+  <div class="container">
+      <div class="row">
+          <div class="titles1 col-md-12 col-sm-12 col-xs-12">
+              <h3>Cities</h3>
+              <p>Look at our latest listed properties and check out the facilities on them, We have already sold more than you think.</p>
+          </div>
+
+  <div class="col-md-3 col-sm-6 col-xs-12" *ngFor="let city of cityList">
+      <div class="agent-area">
+          <div class="agent-pro">
+              <img src="{{city.picture}}" alt="Property Image">
+          </div>
+          <div class="ag-detail">
+              <div class="ag-name">
+                  <h4 class="name">{{city.name}}</h4>
+                  <a class="btn btn-sm btn-default abtn" (click)="selectCitySites(city)">Veiw</a>
+              </div>
+              <div class="property-feature">
+                  <span title="Bedrooms" class="icon beds"></span>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  </div>
+  </div>
+  <div class="divider-medium"></div>
+</div>
+<!-- End latest property -->
+
+<!-- Start Agent Section -->
+<div class="col-md-12 col-sm-12 col-xs-12 agent">
+  <div class="divider-medium"></div>
+  <div class="container">
+      <div class="row">
+          <div class="titles1 col-md-12 col-sm-12 col-xs-12">
+              <h3>Latest Properties</h3>
+              <p>Meet our best agents who work with us.</p>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12" *ngFor="let place of placeList">
+            <div class="latest-property">
+                <div class="stickers">
+                    <span class="status">{{place.price}}</span>
+                </div>
+                <a (click)='gotoDetails(place)'>
+                    <img src="{{place.picture}}" alt="home-663241">
+                </a>
+                <div class=" property-content">
+                    <h3 class="entry-title"><a (click)='gotoDetails(place)' title="">{{place.contactPerson}}</a>
+                    </h3>
+                    <div class="property-address">
+                        <span class="item-street"> {{place.address}}</span>
+                    </div>
+                    <div class="entry-content">
+                       {{place.story}}
+                    </div>
+                    <div class="property-feature">
+                        <span title="Bedrooms" class="icon beds"><span>5</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  </div>
+  </div>
+  <div class="divider-medium"></div>
+</div>

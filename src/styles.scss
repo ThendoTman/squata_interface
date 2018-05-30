@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700');
+// // -- Bootstrap Plugin CSS --
+// @import 'styles/bootstrap.min.css';
+// // -- Fontawesome Icons --
+// @import 'styles/font-awesome.min.css';
+// // -- Elegant Icons --
+// @import 'styles/elegant_font/style.css';
+// // -- Template Stylesheet --
+// @import 'styles/style.css';
+// //-- Responsive Stylesheet --
+// @import 'styles/responsive.css';
+.load{
+  position: absolute;
+  top:0;
+  left: 0;
+  background: yellow !important;
+  width: 100% !important;
+  height: 100% !important;
+  text-align: center;
+  weight:300;
+  text-decoration-color: red;
+}

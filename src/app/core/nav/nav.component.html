@@ -1,0 +1,116 @@
+<!-- Start Main Slider -->
+<div class="slider">
+  <!--img src="image/slider3-1-1.jpg" alt="Slider"-->
+  <!-- Navigation menu -->
+  <div class="main-menu">
+      <nav class="navbar navigation-menu-style-1">
+          <div class="container">
+              <div class="menu-toggle navbar-toggle">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </div>
+              <div class="menu">
+                  <div class="menu-inner">
+                      <div class="sticky-logo">
+                          <!-- Template logo -->
+                          <a href="#">
+                              <img src="assets/image/sticky-logo-small.png" alt="sticky logo">
+                          </a>
+                      </div>
+                      <ul class="nav navbar-nav">
+                          <li><a routerLink="/home" >Home</a></li>
+                          <li><a routerLink="/home/about" >About</a></li>
+                          <li><a routerLink="/home/contact" >Contact Us</a></li>
+
+            <!-- <li><a href="faq.php">FAQ</a></li> -->
+                      </ul>
+                      <span class="icon_search search-menu-icon" aria-hidden="true" id="open_overlay"></span>
+                      <div id="myNav_search" class="overlay-search">
+                          <a href="javascript:void(0)" class="closebtn" id="close_overlay">&times;</a>
+                          <div class="overlay-content-search">
+                              <form id="search_form" class="contact-form" novalidate="novalidate">
+                                  <div class="search-form">
+                                      <form method="post">
+                                        <input type="hidden" name="action" value="epl_search">
+                                        <input type="hidden" class="field-in" name="post_type" id="post_type" value="property">
+                                        <input type="hidden" class="field-in" name="property_status" id="property_status"
+                                             value="">
+                                         <div class="search-row search-select search-row-full">
+                                          <label for="location" class="search-label ">
+                                            City
+                                          </label>
+                                          <div class="field">
+                                            <select name="property_location" id="location" class="field-in">
+                                              <option value="">Choose city</option>
+                                              <option value="27">Pretoria</option>
+                                              <option value="27">Johannesburg</option>
+                                              <option value="27">Ekuruleni</option>
+                                              <option value="27">Polokwane</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="search-row search-select search-row-full">
+                                          <label for="location" class="search-label ">
+                                            Suburb
+                                          </label>
+                                          <div class="field">
+                                            <select name="property_location" id="location" class="field-in">
+                                              <option value="">Any</option>
+                                              <option value="27">Palo Alto CA</option>
+                                            </select>
+                                          </div>
+                                        </div>
+
+                                        <div class="search-row search-select search-row-half property_price_from">
+                                          <label for="price_from" class="search-label ">
+                                            Price From
+                                          </label>
+                                          <div class="field">
+                                            <select name="property_price_from" id="price_from" class="field-in">
+                                              <option value="">Any</option>
+                                              <option value="50000">R200</option>
+                                              <option value="100000">R700</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="search-row search-select search-row-half property_price_to">
+                                          <label for="property_price_to" class="search-label ">
+                                            Price To
+                                          </label>
+                                          <div class="field">
+                                            <select name="property_price_to" id="property_price_to" class="field-in">
+                                              <option value="">Any</option>
+                                              <option value="50000">R300</option>
+                                              <option value="100000">R1,200</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                         <div class="search-row search-select search-row-full">
+                                          <label for="category" class="search-label ">
+                                            Room Category
+                                          </label>
+                                          <div class="field">
+                                            <select name="property_category" id="category" class="field-in">
+                                              <option value="">Any</option>
+                                              <option value="Villa">Backroom</option>
+                                              <option value="House">Room Share</option>
+                                              <option value="House">Flat Room</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                        <div class="search-submit">
+                                           <input type="submit" value="Find me a Room">
+                                        </div>
+                                      </form>
+                                    </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </div>
+</div>

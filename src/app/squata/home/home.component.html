@@ -1,0 +1,36 @@
+<!-- End Main Slider -->
+<div class="col-md-12 col-sm-12 col-xs-12 service-section">
+    <div class="container">
+        <div class="inner-service-section">
+            <div class="col-md-4 col-sm-4 search col-xs-12">
+                <div class="widget property_search">
+                    <div class="widget-title">
+                        <h3 class="custom_heading">
+                            <i class="icon_search"></i>Find your room
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                      <ms-search (searchedPlaceList)="searchPlaces($event)"></ms-search>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-12 service"> </div>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="!searched">
+  <ms-index
+  [cityList]="cityList"
+  [placeList]="placeList">
+  </ms-index>
+</div>
+
+<div>
+  <ms-searched
+  [searchPlacesList] ="searchedPlaceList"
+  >
+  </ms-searched>
+</div>
+

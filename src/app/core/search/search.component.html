@@ -1,0 +1,77 @@
+<div class="search-form">
+    <input type="hidden" name="action" value="epl_search">
+    <input type="hidden" class="field-in" name="post_type" id="post_type" value="property">
+    <input type="hidden" class="field-in" name="property_status" id="property_status"
+         value="">
+     <div class="search-row search-select search-row-full">
+      <label for="location" class="search-label ">
+        City
+      </label>
+        <p-dropdown
+        (onChange)="citySelection()"
+        [options]="cityList"
+        [(ngModel)]="selectedCity"
+        [style]="{'width':'100%'}"
+        placeholder="Select a City"
+        optionLabel="name"
+        filter="true">
+
+        </p-dropdown>
+    </div>
+    <div class="search-row search-select search-row-full">
+      <label for="location" class="search-label ">
+        Suburb
+      </label>
+      <p-dropdown
+      [options]="siteList"
+      [(ngModel)]="selectedSite"
+      [style]="{'width':'100%'}"
+      placeholder="Select Areas"
+      optionLabel="name"
+      filter="true">
+      </p-dropdown>
+    </div>
+
+    <div class="search-row search-select search-row-half property_price_from">
+      <label for="price_from" class="search-label ">
+        Price From
+      </label>
+      <p-dropdown
+      [options]="priaces"
+      [(ngModel)]="lowPriace"
+      [style]="{'width':'100%'}"
+      placeholder="Select Price"
+      optionLabel="name"
+      filter="true">
+      </p-dropdown>
+    </div>
+    <div class="search-row search-select search-row-half property_price_to">
+      <label for="property_price_to" class="search-label ">
+        Price To
+      </label>
+      <p-dropdown
+      [options]="priaces"
+      [(ngModel)]="highPriace"
+      [style]="{'width':'100%'}"
+      placeholder="Select Price"
+      optionLabel="name"
+      filter="true">
+      </p-dropdown>
+    </div>
+     <div class="search-row search-select search-row-full">
+      <label for="category" class="search-label ">
+        Room Category
+      </label>
+      <p-dropdown
+      [options]="roomList"
+      [(ngModel)]="selectedRoom"
+      [style]="{'width':'70%'}"
+      placeholder="Select Category"
+      optionLabel="description"
+      filter="true">
+      </p-dropdown>
+    </div>
+    <div class="search-submit">
+       <input type="submit" value="Find me a Room" (click)="searchPlace()">
+    </div>
+</div>

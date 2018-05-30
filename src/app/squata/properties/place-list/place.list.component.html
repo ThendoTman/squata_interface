@@ -1,0 +1,59 @@
+<div class="sub-header">
+  <div class="sub-header-shadow">
+      <div class="container">
+          <div class="sub_header_text">
+              <div class="sub-header-property-detail">
+                  <h2>Places to Rent</h2>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container">
+  <div class="divider-medium"></div>
+  <div class="row">
+      <div class="col-md-12 col-sm-7">
+          <div id="property-list" class="grid-style">
+              <div class="row">
+                  <div class="col-md-4 property-item" *ngFor="let place of placeList">
+                      <div class="property-box">
+                          <div class="property-image">
+                              <a (click)='gotoDetails(place)'>
+                                  <span class="btn btn-default"><i class="fa fa-file-o"></i> Details</span>
+                              </a>
+                              <img alt="" src="{{place.picture}}">
+                          </div>
+                          <div class="property-price">
+                          <i class="fa fa-home"></i>
+                              <span>R{{place.price}}</span> /PM
+
+                          </div>
+                          <div class="property-detail">
+                              <h3>
+                                  <a class="link" (click)='gotoDetails(place)'>{{place.heading}}</a>
+                                  <small>{{place.address}}</small>
+                              </h3>
+                              <p>{{place.story}}</p>
+
+                              <ul class="amenities">
+                                  <li><i class="icon_box-selected"></i>{{place.views}}</li>
+                                  <li><i class="icon_drawer_alt"></i>{{place.rate}}</li>
+                                  <li><i class="icon_cart_alt"></i>{{place.tenets}}</li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+          <div class="pagination">
+              <ul>
+                 <li *ngIf="pageCount>4" id="previous"><a class="link" (click)="gotoPrevius()"><i class="fa fa-chevron-left"></i></a></li>
+                  <li  *ngFor="let page of pages" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a  class="link" (click)="gotoPage(page)">{{page}}</a></li>
+                  <li *ngIf="pageCount>4" id="next"><a class="link" (click)="gotoNext()"><i class="fa fa-chevron-right"></i></a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div class="divider-medium"></div>
+</div><!-- End Property Section -->
